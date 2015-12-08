@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+	#quote{height: 50px; text-align: center; font-family: arial; font-size: 14px}
+	#container{text-align: center; width: 100%}
+</style>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+	jQuery(
+		function() {
+			var favQuotes = new Array();
+			favQuotes[0] = "The race is not to the swift but to those who keep running";
+			favQuotes[1] = "Every blade of grass has its angel that bends over it and whispers, 'Grow, grow.'";
+			favQuotes[2] = "When I let go of what I am, I become what I might be";
+			favQuotes[3] = "The spaces between your fingers were created so that another's could fill them in";
+			favQuotes[4] = "In the end, it's not going to matter how many breaths you took, but how many moments took your breath away";
+			favQuotes[5] = "Don't cry because it's over, smile because it happened";			
+			
+			$("#myBtn").click (
+			function() {
+				var ranQuote = Math.floor(Math.random() * favQuotes.length);
+				
+				//alert(favQuotes[ranQuote]);
+			   $("#quote").html(favQuotes[ranQuote]);
+			  }
+			);
+		}//end of master function
+	);//end of jQuery container
+	
+	/*
+				"The race is not to the swift but to those who keep running";
+				"Every blade of grass has its angel that bends over it and whispers, 'Grow, grow.' "
+				"When I let go of what I am, I become what I might be";
+				"The spaces between your fingers were created so that another's could fill them in";
+				"In the end, it's not going to matter how many breaths you took, but how many moments took your breath away";
+				"Don't cry because it's over, smile because it happened";
+	*/
+</script>
+
+</head>
+
+<body>
+	<div id="container">
+    	<div id="quote">
+    	</div>
+    	<form>
+    		<input type="button" id="myBtn" value="Click Here to See a Random Quote"  />
+      	</form>
+    </div>
+</body>
+</html>
